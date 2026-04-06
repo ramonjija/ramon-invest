@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PasswordGate from "./PasswordGate";
 
 const CARTEIRA = {
   acoes: [
@@ -89,6 +90,7 @@ export default function App(){
   const tabs=["Visao Geral","Carteira","Proventos","Reinvestir"];
 
   return (
+    <PasswordGate>
     <div style={{minHeight:"100vh",background:C.bg,color:C.text,fontFamily:"system-ui,sans-serif",padding:"20px 16px"}}>
       <div style={{maxWidth:900,margin:"0 auto"}}>
 
@@ -368,5 +370,6 @@ export default function App(){
         </div>
       </div>
     </div>
+    </PasswordGate>
   );
 }
